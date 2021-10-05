@@ -96,4 +96,3 @@ term.addPreSaveHook( () => {
     mySuperCallback(term.getText());
 });
 ```
-test
