@@ -29,4 +29,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install
+    - run: ./bin.js README.md
     - run: npm run test
