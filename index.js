@@ -102,7 +102,7 @@ class Termit {
 	drawPrompt(prompt) {
 		this.drawBar({
 			x: 0,
-			y: this.term.height
+			y: this.term.height || 0
 		}, prompt, true);
 		if (this.statusBarTimer) {
 			clearTimeout(this.statusBarTimer);
@@ -113,7 +113,7 @@ class Termit {
 	drawStatusBar(message = defaults.statusBar.message, timeout = -1) {
 		this.drawBar({
 			x: 0,
-			y: this.term.height
+			y: this.term.height || 0
 		}, message);
 
 		this.textBuffer.draw();
