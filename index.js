@@ -29,7 +29,6 @@ class Termit {
 		defaults.titleBar.title = options.title || defaults.titleBar.title;
 
 		this.term = terminalKit.terminal;
-		console.log(this.term)
 		this.statusBarTimer = undefined;
 		this.fileIsModified = false;
 
@@ -38,7 +37,6 @@ class Termit {
 			height: this.term.height - 2,
 			y: 2
 		});
-		console.log(this.screenBuffer)
 
 		this.textBuffer = new terminalKit.TextBuffer({
 			dst: this.screenBuffer
