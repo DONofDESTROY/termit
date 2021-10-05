@@ -31,10 +31,9 @@ class Termit {
 		this.term = terminalKit.terminal;
 		this.statusBarTimer = undefined;
 		this.fileIsModified = false;
-		console.log(this.term)
 		this.screenBuffer = new terminalKit.ScreenBuffer({
 			dst: this.term,
-			height: this.term.height - 2 || 0,
+			height: this.term.height - 2,
 			y: 2
 		});
 
@@ -102,7 +101,7 @@ class Termit {
 	drawPrompt(prompt) {
 		this.drawBar({
 			x: 0,
-			y: this.term.height || 0
+			y: this.term.height,
 		}, prompt, true);
 		if (this.statusBarTimer) {
 			clearTimeout(this.statusBarTimer);
@@ -113,7 +112,7 @@ class Termit {
 	drawStatusBar(message = defaults.statusBar.message, timeout = -1) {
 		this.drawBar({
 			x: 0,
-			y: this.term.height || 0
+			y: this.term.height,
 		}, message);
 
 		this.textBuffer.draw();
