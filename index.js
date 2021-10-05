@@ -34,7 +34,7 @@ class Termit {
 		console.log(this.term)
 		this.screenBuffer = new terminalKit.ScreenBuffer({
 			dst: this.term,
-			height: this.term.height - 2,
+			height: this.term.height - 2 || 0,
 			y: 2
 		});
 
