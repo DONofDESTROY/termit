@@ -31,7 +31,7 @@ class Termit {
 		this.term = terminalKit.terminal;
 		this.statusBarTimer = undefined;
 		this.fileIsModified = false;
-
+		console.log(this.term)
 		this.screenBuffer = new terminalKit.ScreenBuffer({
 			dst: this.term,
 			height: this.term.height - 2,
